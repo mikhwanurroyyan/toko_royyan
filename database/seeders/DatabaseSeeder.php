@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Admin2;
+use App\Models\Admin;
 use App\Models\Distributor;
+use App\Models\Product;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,29 +16,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+         User::factory(10)->create();
 
-        User::create([
-            'name' => 'users1',
-            'email' => 'user1@gmail.com',
-            'password' => bcrypt('123456789'),
-            'point' => '10000',
-        ]);
+         User::create([
+             'name' => 'users1',
+             'email' => 'user1@gmail.com',
+             'password' => bcrypt('123456789'),
+             'point' => '10000',
+         ]);
 
-        Admin2::create([
+        
+         Admin::create([
             'name' => 'admins',
             'username' => 'Admin',
-            'email' => 'admin@gmail.com',
+            'email' => 'Admin@gmail.com',
             'password' => bcrypt('123456789'),
         
         ]);
 
-        Distributor::create([
-            'nama_distributor' => 'distributors',
-            'lokasi' => 'jawa',
-            'kontak' => '26127128',
-            'email' => 'distributor@gmail.com',
+         Distributor::create([
+             'nama_distributor' => 'distributors',
+             'lokasi' => 'jawa',
+             'kontak' => '26127128',
+             'email' => 'distributor@gmail.com',
         
-        ]);
+         ]);
     }
 }
